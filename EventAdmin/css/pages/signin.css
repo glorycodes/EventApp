@@ -61,10 +61,10 @@ body{ background: url(../../img/body-bg.png); color:#838383; font: 13px/1.7em 'O
 
 
 .login-actions {
-	float: left;
+	/**float: middle; */
 	
 	width: 100%;
-	
+	padding-right: 20em;
 	margin-top: -1em;
 	margin-bottom: 1.25em;
 }

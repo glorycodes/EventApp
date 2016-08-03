@@ -264,9 +264,9 @@ textarea {
 
 .extra {
 
-	border-top: 1px solid #585858;
+	border-top: 1px solid #ffffff;
 	border-bottom: 1px solid #000;
-
+	opacity: .4;
 }
 
 .extra-inner {
@@ -275,7 +275,8 @@ textarea {
 	font-size: 11px;
 	color: #BBB;
 	
-	background: #1A1A1A;
+	background: #ffffff;
+	opacity: .4;
 }
 
 .extra a {
