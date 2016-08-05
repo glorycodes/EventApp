@@ -1,24 +1,74 @@
-// Ionic Starter App
+(function() {
+	// Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDhrhS7R0XUA9h5V4YCQI6FVuRz625dAQM",
+    authDomain: "cabbooking-55f03.firebaseapp.com",
+    databaseURL: "https://cabbooking-55f03.firebaseio.com",
+    storageBucket: "cabbooking-55f03.appspot.com",
+  };
+  firebase.initializeApp(config);
 
-// angular.module is a global place for creating, registering and retrieving Angular modules
-// 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
-// the 2nd parameter is an array of 'requires'
-angular.module('starter', ['ionic'])
 
-.run(function($ionicPlatform) {
-  $ionicPlatform.ready(function() {
-    if(window.cordova && window.cordova.plugins.Keyboard) {
-      // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
-      // for form inputs)
-      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+  var fName = document.getElementById('fname');
+  var lname = document.getElementById('lname');
+  var txtEmail = document.getElementById('email');
+  var txtTel = document.getElementById('tel');
+  var txtPass = document.getElementById('txtPass');
+  var btnLogin = document.getElementById('btnLogin');
+  var btnSignup = document.getElementById('btnSignup');
+  var btnPass = document.getElementById('btnPass');
+  var btnFacebook = document.getElementById('btnFacebook');
 
-      // Don't remove this line unless you know what you are doing. It stops the viewport
-      // from snapping when text inputs are focused. Ionic handles this internally for
-      // a much nicer keyboard experience.
-      cordova.plugins.Keyboard.disableScroll(true);
-    }
-    if(window.StatusBar) {
-      StatusBar.styleDefault();
-    }
+  //Add event listener for Login Button
+  if(btnLogin) {
+  	btnLogin.addEventListener('click', e => {
+	  	var email = txtEmail.value;
+	  	var pass = txtPass.value;
+	  	var auth = firebase.auth();
+
+	  	// Sign in
+	  	var doLog = auth.signInWithEmailAndPassword(email, pass);
+	  	doLog.catch(e => console.log(e.message));
+
+	  	if (doLog != null){
+	  		console.log("You have logged in");
+	  		window.location.href = "booking.html";
+	  	}else {
+	  		console.log("Wrong or unavailable Account details");
+	  		document.write("Wrong or unavailable Account details");
+	  	}
+	 });
+  }
+
+  // Add event listener for Signup button
+  if(btnSignup){
+  	btnSignup.addEventListener('click', e => {
+	  	var email = txtEmail.value;
+	  	var pass = txtPass.value;
+	  	var auth = firebase.auth();
+
+	  	// Sign up
+	  	var doSignup = auth.createUserWithEmailAndPassword(email, pass);
+	  	doSignup.catch(e => console.log(e.message));
+
+	  	if (doSignup != null) {
+	  		console.log("Sign Up successful");
+
+	  	}
+
+	  });
+  }
+
+  //Add a firebase realtime listener if user exists
+  firebase.auth().onAuthStateChanged(firebase => {
+  	if (firebaseUser) {
+  		console.log(firebaseUser);
+  	} else {
+  		console.log('not logged in');
+  	}
   });
-})
+
+}());
+  
+
+    
