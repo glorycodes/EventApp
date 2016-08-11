@@ -1,39 +1,32 @@
-(function () {
-  
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyDhrhS7R0XUA9h5V4YCQI6FVuRz625dAQM",
-    authDomain: "cabbooking-55f03.firebaseapp.com",
-    databaseURL: "https://cabbooking-55f03.firebaseio.com",
-    storageBucket: "cabbooking-55f03.appspot.com",
-  };
-
-  firebase.initializeApp(config);
+// Google Authentication provider
+  var provider = new firebase.auth.GoogleAuthProvider();
 
 
   // Get user inputs
-  var fName = document.getElementById('fname');
-  var lName = document.getElementById('lname');
-  var txtEmail = document.getElementById('email');
-  var txtPass = document.getElementById('txtPass');
-  var btnGPlus = document.getElementById('gplus');
-  var btnSignup = document.getElementById('btnSignup');
+  var userfName = document.getElementById('userFirstName');
+  var userlName = document.getElementById('userLastName');
+  var userEmail = document.getElementById('userEmail');
+  var userPass = document.getElementById('userPass');
+  var gPlus = document.getElementById('gplus');
+  var signIn = document.getElementById('signIn');
+  var signUp = document.getElementById('signUp');
+  var signOut = document.getElementById('signOut')
   
   //Add event listener for Login Button
   
-    if (btnLogin != null) {
-        btnLogin.addEventListener('click', e => {
-        var email = txtEmail.value;
-        var pass = txtPass.value;
+    if (signIn != null) {
+        signIn.addEventListener('click', e => {
+        var email = userEmail.value;
+        var pass = userPass.value;
         var auth = firebase.auth();
 
         // Sign in
-        var doLog = auth.signInWithEmailAndPassword(email, pass);
-        doLog.catch(e => console.log(e.message));
+        var login = auth.signInWithEmailAndPassword(email, pass);
+        login.catch(e => console.log(e.message));
 
-        if (doLog != null){
+        if (login != null){
           console.log("You have logged in");
-          window.location.href = "dashboard.html";
+          window.location.href = "home.html";
         }else {
           console.log("Wrong or unavailable Account details");
         }
@@ -41,27 +34,26 @@
     } 
 
   // Add event listener for Signup button
-    if (btnSignup != null) {
-      btnSignup.addEventListener('click', e => {
-      var email = txtEmail.value;
-      var pass = txtPass.value;
+    if (signUp != null) {
+      signUp.addEventListener('click', e => {
+      var email = userEmail.value;
+      var pass = userPass.value;
       var auth = firebase.auth();
 
       // Sign up
-      var doSignup = auth.createUserWithEmailAndPassword(email, pass);
-      doSignup.catch(e => console.log(e.message));
+      var logUp = auth.createUserWithEmailAndPassword(email, pass);
+      logUp.catch(e => console.log(e.message));
 
-      if (doSignup != null) {
+      if (logUp != null) {
         console.log("Sign Up successful");
 
-        dbRefUsers.ref().child("users/").push({
-          firstname: fName.value,
-          lastname: lName.value,
-          email: txtEmail.value,
-          tel: txtTel.value
+        dbRefUsers.ref().child("profiles/").push({
+          firstname: userfName.value,
+          lastname: userlName.value,
+          email: userEmail.value
         });
 
-        window.location.href = "view_users.html";
+        window.location.href = "home.html";
       }
 
     });
@@ -77,16 +69,29 @@
     });
 
     // Add event listener for Logout button
-    if (btnLogout != null) {
-      btnLogout.addEventListener('click', e => {
+    if (signOut != null) {
+      signOut.addEventListener('click', e => {
         firebase.auth().signOut().then(function(){
           window.location.href = "index.html";
         });
       });
     } 
 
-
-}());
-
-
-    
+    if (gPlus != null) {
+      firebase.auth().signInWithPopup(provider).then(function(result) {
+        // This gives you a Google Access Token. You can use it to access the Google API.
+        var token = result.credential.accessToken;
+        // The signed-in user info.
+        var user = result.user;
+        // ...
+      }).catch(function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // The email of the user's account used.
+        var email = error.email;
+        // The firebase.auth.AuthCredential type that was used.
+        var credential = error.credential;
+        // ...
+      });
+    }

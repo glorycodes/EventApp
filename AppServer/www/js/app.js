@@ -2,10 +2,11 @@
   
   // Initialize Firebase
   var config = {
-    apiKey: "AIzaSyDhrhS7R0XUA9h5V4YCQI6FVuRz625dAQM",
-    authDomain: "cabbooking-55f03.firebaseapp.com",
-    databaseURL: "https://cabbooking-55f03.firebaseio.com",
-    storageBucket: "cabbooking-55f03.appspot.com",
+    apiKey: "AIzaSyDaqH6X_JmI06L64vF4B75hPsE6ZRmttxc",
+    authDomain: "eventapp-913e5.firebaseapp.com",
+    databaseURL: "https://eventapp-913e5.firebaseio.com",
+    storageBucket: "eventapp-913e5.appspot.com",
+
   };
 
   firebase.initializeApp(config);

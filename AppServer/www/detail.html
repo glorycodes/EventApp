@@ -54,7 +54,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<li><a href="home.html"><i class="glyphicon glyphicon-home"></i> Home </a></li>
 					<li><a class="active" href="events.html"><i class="glyphicon glyphicon-picture"></i> Events</a></li>
 					<li><a href="gallery.html"><i class="glyphicon glyphicon-picture"></i> Gallery</a></li>
-					<li><a href="contact.html"><i class="glyphicon glyphicon-envelope"></i> Contact </a></li>
+					<li><a id="signOut"><i class="glyphicon glyphicon-envelope"></i> Contact </a></li>
 				</ul>
 			</nav>
 			<button class="close-button" id="close-button">C</button>
@@ -86,7 +86,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<div class="properties-img properties-img-single">
 						<img src="images/3.jpg" alt="">
 						<div class="view-caption">
-							<h4><span class="glyphicon glyphicon-map-marker"></span> Broome St, Canada, USA </h4>  
+							<h4><span class="glyphicon glyphicon-map-marker"></span> Beyonce Live, Vegas, USA </h4>  
 						</div> 
 					</div>
 					<div class="w3ls-details">   
@@ -100,24 +100,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<p><b>Bath Rooms :</b> 2 </p>
 						</div>
 					</div>
-					<div class="w3ls-features">   
-						<h3 class="w3ls-title">Event Highlights</h3> 
-						<ul> 
-							<li><span class="glyphicon glyphicon-ok"> </span> School </li>
-							<li><span class="glyphicon glyphicon-ok"> </span> Fireplace</li>
-							<li><span class="glyphicon glyphicon-ok"> </span> Wine Cellar</li>
-							<li><span class="glyphicon glyphicon-ok"> </span> Gym</li>
-							<li><span class="glyphicon glyphicon-ok"> </span> Storm Windows</li>
-							<li><span class="glyphicon glyphicon-ok"> </span> Storm Windows</li>
-							<li><span class="glyphicon glyphicon-ok"> </span> Pet Allowed</li>
-						</ul>
-					</div>
+					
 					<div class="map"> 
 						<h3 class="w3ls-title">Location Map</h3>
 						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.9503398796587!2d-73.9940307!3d40.719109700000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a27e2f24131%3A0x64ffc98d24069f02!2sCANADA!5e0!3m2!1sen!2sin!4v1441710758555" allowfullscreen></iframe>
 					</div>
 					<div class="w3ls-related">   
-						<h3 class="w3ls-title">Make An Enquiry</h3>
+						<h3 class="w3ls-title">Book this Event</h3>
 						<div class="contact-form"> 
 							<form action="#" method="post">
 								<input type="text" name="Name" placeholder="Name" required="">
@@ -167,5 +156,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/bootstrap.js"></script>
+    <script src="js/app.js"></script>
+	<script src="js/auth.js"</script>
+	<script src="js/database.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-app.js"></script>
+  	<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-auth.js"></script>
+  	<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
 </body>
 </html>
