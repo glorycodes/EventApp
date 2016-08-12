@@ -59,7 +59,7 @@ h1 {
 	width: 30%;
 	margin: 0px;
 	text-align: center;
-	
+
 }
 
 h2 {
@@ -175,6 +175,32 @@ input[type="submit"]:hover {
 	-o-transition:0.5s all;
 	-ms-transition:0.5s all;
 }
+
+.btn {
+	margin-top: 40px;
+	padding: 8px 30px;
+	border: none;
+	outline: none;
+	font-size: 20px;
+	letter-spacing: 2px;
+	color: #fff;
+	background-color:rgba(90, 81, 28, 0.7);
+	transition: 0.5s all;
+	webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
+	-ms-transition: 0.5s all;
+}
+.btn:hover {
+	background-color: #000;
+	color: #FFF;
+	cursor:pointer;transition:0.5s all;
+	-webkit-transition:0.5s all;
+	-moz-transition:0.5s all;
+	-o-transition:0.5s all;
+	-ms-transition:0.5s all;
+}
+
 h3{
 	padding:10px 0px;
 	background-color: rgba(0, 0, 0, 0.23);
@@ -188,7 +214,7 @@ h3:before{
     height: 1px;
     left: 300px;
     bottom: 19px;
-    position: absolute;	
+    position: absolute;
 }
 h3:after{
 	content: '';
@@ -253,7 +279,7 @@ h4.twitter:before{
 	input.name {
 		background: rgb(255, 255, 255) url("../images/user.png") no-repeat 10px 10px;
 		width: 86.5%;
-	}	
+	}
 	input.password {
 		background: rgb(255, 255, 255) url("../images/password.png") no-repeat 10px 10px;
 		width: 86.5%;
@@ -273,11 +299,11 @@ h4.twitter:before{
 		left: 255px;
 	}
 	input.name {
-		
+
 		width: 85%;
-	}	
+	}
 	input.password {
-		
+
 		width: 85%;
 	}
 }
@@ -295,11 +321,11 @@ h4.twitter:before{
 		margin-left:60px;
 	}
 	input.name {
-		
+
 		width: 84%;
-	}	
+	}
 	input.password {
-		
+
 		width: 84%;
 	}
 }
@@ -317,11 +343,11 @@ h4.twitter:before{
 		margin-left:55px;
 	}
 	input.name {
-		
+
 		width: 83%;
-	}	
+	}
 	input.password {
-		
+
 		width: 83%;
 	}
 }
@@ -342,11 +368,11 @@ h4.twitter:before{
 		margin-left: 75px;
 	}
 	input.name {
-		
+
 		width: 86.5%;
-	}	
+	}
 	input.password {
-		
+
 		width: 86.5%;
 	}
 }
@@ -368,11 +394,11 @@ h4.twitter:before{
 		margin-left: 58px;
 	}
 	input.name {
-		
+
 		width: 84%;
-	}	
+	}
 	input.password {
-		
+
 		width: 84%;
 	}
 }
@@ -397,11 +423,11 @@ h4.twitter:before{
 		margin-left: 54px;
 	}
 	input.name {
-		
+
 		width: 83%;
-	}	
+	}
 	input.password {
-		
+
 		width: 83%;
 	}
 }
@@ -417,11 +443,11 @@ h4.twitter:before{
 		left: 215px;
 	}
 	input.name {
-		
+
 		width: 82%;
-	}	
+	}
 	input.password {
-		
+
 		width: 82%;
 	}
 }
@@ -433,11 +459,11 @@ h4.twitter:before{
 		left: 210px;
 	}
 	input.name {
-		
+
 		width: 81%;
-	}	
+	}
 	input.password {
-		
+
 		width: 81%;
 	}
 }
@@ -449,11 +475,11 @@ h4.twitter:before{
 		left: 200px;
 	}
 	input.name {
-		
+
 		width: 79.5%;
-	}	
+	}
 	input.password {
-		
+
 		width: 79.5%;
 	}
 }
@@ -471,11 +497,11 @@ h4.twitter:before{
 		left: 209px;
 	}
 	input.name {
-		
+
 		width: 81%;
-	}	
+	}
 	input.password {
-		
+
 		width: 81%;
 	}
 }
@@ -503,11 +529,11 @@ h4.twitter:before{
 		margin-left: 47px;
 	}
 	input.name {
-		
+
 		width: 80%;
-	}	
+	}
 	input.password {
-		
+
 		width: 80%;
 	}
 }
@@ -536,11 +562,11 @@ h4.twitter:before{
 		margin-left: 67px;
 	}
 	input.name {
-		
+
 		width: 85.5%;
-	}	
+	}
 	input.password {
-		
+
 		width: 85.5%;
 	}
 }
@@ -564,11 +590,11 @@ h4.twitter:before{
 		margin-left: 53px;
 	}
 	input.name {
-		
+
 		width: 84.5%;
-	}	
+	}
 	input.password {
-		
+
 		width: 84.5%;
 	}
 }
@@ -592,11 +618,11 @@ h4.twitter:before{
 		margin-left: 51px;
 	}
 	input.name {
-		
+
 		width: 83.5%;
-	}	
+	}
 	input.password {
-		
+
 		width: 83.5%;
 	}
 }
@@ -617,11 +643,11 @@ h4.twitter:before{
 		font-size:14px;
 	}
 	input.name {
-		
+
 		width: 82.5%;
-	}	
+	}
 	input.password {
-		
+
 		width: 82.5%;
 	}
 }
@@ -643,11 +669,11 @@ h4.twitter:before{
 		margin-left: 41px;
 	}
 	input.name {
-		
+
 		width: 81.5%;
-	}	
+	}
 	input.password {
-		
+
 		width: 81.5%;
 	}
 }
@@ -672,7 +698,7 @@ h4.twitter:before{
 	h4.twitter {
 		margin-left:43px;
 	}
-	
+
 }
 @media(max-width:414px){
 	.container{
@@ -779,11 +805,11 @@ h4.twitter:before{
 		height: 39px;
 	}
 	input.name {
-		
+
 		width: 80.5%;
-	}	
+	}
 	input.password {
-		
+
 		width: 80.5%;
 	}
 }
@@ -815,11 +841,11 @@ h4.twitter:before{
 		width: 50px;
 	}
 	input.name {
-		
+
 		width: 81.5%;
-	}	
+	}
 	input.password {
-		
+
 		width: 81.5%;
 	}
 }
@@ -834,7 +860,7 @@ h4.twitter:before{
 	form {
 		padding: 20px 10px;
 	}
-	
+
 	ul li input[type="checkbox"]+label span:first-child {
 		width: 10px;
 		height: 10px;
@@ -879,11 +905,11 @@ h4.twitter:before{
 		margin-top: 25px;
 	}
 	input.name {
-		
+
 		width: 76.5%;
-	}	
+	}
 	input.password {
-		
+
 		width: 76.5%;
 	}
 }
